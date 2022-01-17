@@ -4,10 +4,15 @@
 }
 
 body {
-  font-family: 'Mulish', sans-serif;
-  font-size: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  font-family: 'Muli', sans-serif;
+}
+
+.container {
+  max-width: 1110px;
+  margin: auto;
+}
+
+.header {
+  background-color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
