@@ -23,7 +23,7 @@
     flex-wrap: wrap
     align-items: center
   &-discription
-    font-size: 13px
+    font-size: 12px
     line-height: 6px
   &-grid
     display: flex
@@ -52,7 +52,6 @@
         left: 0
         background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%)
         z-index: 10
-
     &__button
       position: absolute
       top: 50%
@@ -72,9 +71,12 @@
       &--prev
         left: 18px
         background-image: url(../img/arrow-prev.svg)
-
+  .swiper
+    margin-left: 2px
 .stars
   flex-basis: 100%
+.image-star
+  margin-right: -2px
 .offer
   font-size: 10px
   line-height: 13px
@@ -100,7 +102,7 @@
   font-family: Nunito
   border-radius: 8px
   width: 350px
-  min-height: 210px
+  max-height: 210px
   padding: 28px
   background-color: $dark
   color: $light
@@ -120,6 +122,7 @@
     font-weight: 800
     font-size: 24px
     line-height: 33px
+    margin-bottom: -5px
   &__per-room
     font-style: normal
     font-weight: normal
@@ -172,6 +175,8 @@
     border: none
     color: $light
     cursor: pointer
+  &__phone
+    margin-right: 8px
 .map
   width: 347px
   height: 213px
