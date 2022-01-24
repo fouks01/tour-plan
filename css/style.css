@@ -788,7 +788,7 @@ template {
 }
 
 .activities {
-  padding: 60px 0 98px 0;
+  padding: 42px 0 98px 0;
 }
 
 .activities__title {
@@ -860,6 +860,22 @@ template {
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
+}
+
+.card__title-1 {
+  width: 145px;
+}
+
+.card__title-2 {
+  width: 153px;
+}
+
+.card__title-3 {
+  width: 161px;
+}
+
+.card__title-4 {
+  width: 200px;
 }
 
 .card__button {
@@ -1290,6 +1306,9 @@ template {
   .newsletter {
     padding: 72px 0 87px 0;
   }
+  .activities {
+    padding: 30px 0 98px 0;
+  }
   .activities-wrapper {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1299,7 +1318,7 @@ template {
   }
   .card {
     width: 340px;
-    height: 230px;
+    height: 255px;
   }
 }
 
@@ -1476,8 +1495,44 @@ template {
     width: 80%;
     margin-top: -16px;
   }
+  .activities__card {
+    width: 96%;
+  }
+  .activities__card-1 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .activities__card-2 {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin-top: 8px;
+  }
+  .activities__card-3 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .activities__card-4 {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
   .card {
     width: 100%;
+  }
+  .card__title-1 {
+    width: 145px;
+  }
+  .card__title-2 {
+    width: 153px;
+  }
+  .card__title-3 {
+    width: 161px;
+  }
+  .card__title-4 {
+    width: 200px;
   }
 }
 
@@ -1630,8 +1685,38 @@ template {
   .activities__card {
     width: 96%;
   }
-  .card__title {
+  .activities__card-1 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .activities__card-2 {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin-top: 8px;
+  }
+  .activities__card-3 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .activities__card-4 {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .card__title-1 {
     width: 145px;
+  }
+  .card__title-2 {
+    width: 153px;
+  }
+  .card__title-3 {
+    width: 161px;
+  }
+  .card__title-4 {
+    width: 200px;
   }
   .card__button {
     font-weight: 400;
