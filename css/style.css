@@ -1157,7 +1157,7 @@ template {
   }
   .card {
     width: 230px;
-    height: 230px;
+    height: 250px;
   }
 }
 
@@ -1529,7 +1529,7 @@ template {
     margin-right: 14px;
   }
   .stars {
-    padding-right: 33px;
+    padding-right: 29px;
     padding-bottom: 9px;
   }
   .image-star {
@@ -1619,6 +1619,22 @@ template {
   }
   .reviews-slider__profile {
     margin-bottom: 29px;
+  }
+  .activities {
+    padding-top: 3px;
+  }
+  .activities__title {
+    margin-bottom: 32px;
+    font-size: 18px;
+  }
+  .activities__card {
+    width: 96%;
+  }
+  .card__title {
+    width: 145px;
+  }
+  .card__button {
+    font-weight: 400;
   }
 }
 /*# sourceMappingURL=style.css.map */
