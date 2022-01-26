@@ -1629,6 +1629,7 @@ template {
   }
   .footer__input-2 {
     margin-right: 71px;
+    margin-top: 5px;
   }
   .footer__logo {
     -ms-grid-row: 1;
@@ -2018,16 +2019,19 @@ template {
 }
 
 @media (max-width: 480px) {
-  .footer__button {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
   .footer__info {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
     margin-bottom: 15px;
+    margin-left: -4px;
+  }
+  .footer__button {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-top: 0px;
+    margin-right: 100px;
   }
 }
 
