@@ -16,7 +16,8 @@
     height: 250px
   .footer
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
 @media (max-width: 992px)
   .container, .newsletter-wrapper
     max-width: 700px
@@ -124,18 +125,25 @@
     height: 255px
   .footer
     padding-top: 34px
+    &__form
+      margin-left: 0
     &-discription
-      margin-top: -39px
-      margin-left: -14px
+      // margin-top: -39px
+      margin-top: -43px
+      // margin-left: -14px
       justify-content: space-between
     &__info
-      margin-right: 73px
+      // margin-right: 58px
+      margin-top: 4px
     &__button
-      margin-left: -5px
+      // margin-left: -5px
       margin-top: -2px
     &__message
-      margin-right: 71px
-      margin-left: -4px
+      flex-basis: 100%
+      width: 100%
+    // &__message
+    //   margin-right: 57px
+    //   margin-left: -4px
     &__item
       &--mb-2
         margin-bottom: 18px
@@ -144,45 +152,59 @@
     &__text
       margin-left: 5px
     &__title
-      width: 246px
+      // width: 246px
+      width: 230px
       &--mb-3
         &-3
           margin-left: 0
+      &--inline
+        margin: 0px 55px 0 0
+      &_addition
+        width: 246px
     &-wrapper
       grid-template-columns: repeat (6, 1fr )
       grid-row-gap: 40px
     &__input
-      flex-basis: 42%
-      &-1
-        margin-left: -5px
-        margin-top: 5px
-      &-2
-        margin-right: 71px
-        margin-top: 5px
+      &-group
+        flex-basis: 47%
+        width: 100%
+      // &-1
+      //   // margin-left: -5px
+      //   margin-top: 5px
+      // &-2
+      //   // margin-right: 57px
+      //   margin-top: 5px
+      // &-3
+      //   // margin-left: -4px
+      //   flex-basis: 47%
     &__logo
       grid-row: 1 / 2
       grid-column: span 2
       margin-top: 39px
     &__social
       &-links
-        margin-left: -92px
+        margin-left: -77px
       &-network
         grid-row: 1 / 2
         grid-column: span 4
         align-self: center
-        margin-left: -94px
+        // margin-left: -80px
+        margin-left: -63px
         margin-top: 50px
+        width: 100%
+        justify-content: start
     &__categories
       grid-row: 2 / 3
       grid-column: span 2
       margin-top: 11px
     &__legal
       grid-column: span 2
-      margin-top: 10px
-      margin-left: 18px
+      margin-top: 8px
+      margin-left: 32px
     &__additional
       grid-column: span 2
-      margin-left: -79px
+      // margin-left: -66px
+      margin-left: -50px
       margin-top: 9px
     &__contact
       &-details
@@ -194,6 +216,10 @@
         grid-row: 4
         font-size: 12px
         line-height: 15px
+        max-width: 538px
+        margin-top: 2px
+    &-payments
+      margin-left: 0
     .logo
       width: 96px
 
@@ -342,19 +368,22 @@
       &-form
         grid-row: 5
     &__button
-      margin-left: -3px
+      // margin-left: -3px
     &__input,
     &__message
-      flex-basis: 86%
+      flex-basis: 100%
+      width: 100%
     &__message
-      margin-right: 77px
+      margin-right: 0
     &__input
       &-1
-        margin-left: -4px
+        // margin-left: -4px
       &-2
-        margin-left: -4px
+        // margin-left: -4px
+        margin-right: 0
+        margin-top: 0px
     &-payments
-      margin-left: 130px
+      // margin-left: 130px
 @media (max-width: 576px)
   .logo
     width: 99px
@@ -431,7 +460,8 @@
       grid-column: 1px
     &__social
       &-links
-        margin-left: -79px
+        // margin-left: -79px
+        margin-left: -62px
       &-network
         grid-row: 2
         grid-column: 1
@@ -453,23 +483,42 @@
       &-form
         grid-row: 7
         grid-column: 1
-    &__input,
-    &__message
-      flex-basis: 77%
+    // &__input,
+    // &__message
+    //   flex-basis: 77%
 @media (max-width: 480px)
   .footer
     &__info
       order: 1
       margin-bottom: 15px
-      margin-left: -4px
+      margin-top: -5px
+      // margin-left: -4px
     &__button
       order: 2
       margin-top: 0px
-      margin-right: 100px
+      // margin-right: 100px
+      margin-right: 179px
+    &__input
+      &-group
+        flex-basis: 100%
+    &__contact
+      &-form
+        max-width: 300px
+  .modal
+    &__dialog
+      &--visible
+        max-width: 320px
+        padding-left: 13px
+        padding-right: 13px
 @media (max-width: 320px)
   .container
     margin-left: 20px
     margin-right: 20px
+  .menu
+    &-button
+      max-width: 320px
+      &__line
+        // margin-left: -176px
   .hotel
     padding-top: 0
     padding-right: 0
@@ -619,7 +668,7 @@
         margin: -49px 43px 0px 0
     &__social
       &-links
-        margin-left: -287px
+        margin-left: -271px
         margin-top: -4px
     &__legal
       grid-row: 3
@@ -636,6 +685,8 @@
     &__contact
       &-details
         margin-top: -1px
+      &-form
+        margin-top: 0
     &__item
       &--mb
         &-2
@@ -655,23 +706,48 @@
       max-width: 280px
     &__input,
     &__message
-      flex-basis: 77%
-      margin-bottom: 30px
-      width: 291px
+      // flex-basis: 77%
+      margin-bottom: 15px
       margin-top: -16px
     &__info
-      margin-top: -14px
-      margin-left: -4px
+      margin-top: 0px
+      margin-left: 0px
     &__button
       margin-top: 0px
       margin-right: 48px
     &-discription
       margin-top: -72px
     &-conditions
-      margin-left: 0px
+      margin-left: -1px
       font-style: normal
       font-weight: normal
       font-size: 12.5px
       line-height: 15px
       margin-bottom: 9px
       margin-top: -1px
+      margin-right: 4px
+    &__form
+      width: 280px
+  .navbar
+    &-menu
+      margin-top: -19px
+      &__item
+        margin-bottom: 17px
+        margin-right: 17px
+    &__user
+      margin-right: 12px
+    &__search
+      &--mobile
+        &_visible
+          margin-top: 8px
+          margin-bottom: 22px
+          margin-left: 64px
+  .search
+    &__input
+      width: 243px
+  .modal
+    &__dialog
+      &--visible
+        max-width: 320px
+        padding-left: 13px
+        padding-right: 13px

@@ -18,6 +18,57 @@ img {
   max-width: 100%;
 }
 
+.input {
+  background: #fff;
+  border-radius: 4px;
+  border: none;
+  padding: 0 23px;
+  height: 50px;
+}
+
+.message {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 18px 23px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.button {
+  min-width: 160px;
+  min-height: 50px;
+  padding: 18px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #fff;
+  background-color: #EC1F46;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 4px;
+}
+
+.invalid {
+  color: #EC1F46;
+  border-bottom: 1px solid #EC1F46;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -679,7 +730,7 @@ template {
 
 .booking__button {
   width: 100%;
-  min-height: 45px;
+  height: 45px;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -689,6 +740,7 @@ template {
   border: none;
   color: #fff;
   cursor: pointer;
+  margin-top: -2px;
 }
 
 .booking__phone {
@@ -987,7 +1039,6 @@ template {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: 4px;
 }
 
 .footer__ul {
@@ -1067,39 +1118,29 @@ template {
 }
 
 .footer__input {
-  background: #fff;
-  border-radius: 4px;
-  border: none;
-  padding: 0 23px;
-  height: 50px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.footer__input-1 {
+  margin-bottom: 0;
+}
+
+.footer__input-2 {
+  margin-bottom: 0;
+}
+
+.footer__input-group {
   margin-bottom: 15px;
   -ms-flex-preferred-size: 47%;
       flex-basis: 47%;
 }
 
 .footer__message {
-  background-color: #fff;
-  border-radius: 4px;
-  padding: 18px 23px;
-  border: none;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   margin-bottom: 23px;
   height: 123px;
-}
-
-.footer__button {
-  min-width: 160px;
-  min-height: 50px;
-  padding: 18px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  color: #fff;
-  background-color: #EC1F46;
-  border: none;
-  border-radius: 4px;
 }
 
 .footer__info {
@@ -1107,7 +1148,7 @@ template {
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
-  color: #E0E0E0;
+  color: #BDBDBD;
   margin-right: 2px;
 }
 
@@ -1115,16 +1156,20 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: -7px;
 }
 
 .footer-conditions {
-  width: 320px;
-  height: 15px;
-  margin-left: 7px;
-  margin-top: -4px;
+  margin-top: 3px;
 }
 
 .footer-conditions__disclaimer {
@@ -1134,12 +1179,11 @@ template {
   font-weight: normal;
   font-size: 12px;
   line-height: 15px;
+  margin-right: 8px;
 }
 
 .footer-payments {
-  margin-left: 246px;
-  margin-top: -9px;
-  margin-right: 2px;
+  margin-left: 273px;
 }
 
 .footer .logo {
@@ -1293,6 +1337,104 @@ template {
   margin: auto;
 }
 
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 143, 223, 0.39);
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.modal__overlay--visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 478px;
+  padding: 33px 88px;
+  background-color: #0A223D;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  border-radius: 8px;
+  z-index: 101;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.modal__dialog--visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__close {
+  position: absolute;
+  right: 17px;
+  top: 18px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal__input {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.modal__message {
+  width: 100%;
+  min-height: 123px;
+  margin-top: 15px;
+}
+
+.modal__button {
+  margin-top: 15px;
+}
+
+.modal__info {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #BDBDBD;
+}
+
+.modal__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.modal__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 4px;
+}
+
 .navbar {
   background-color: #fff;
 }
@@ -1434,7 +1576,7 @@ template {
     width: 230px;
     height: 250px;
   }
-  .footer__input {
+  .footer__input-group {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
@@ -1586,23 +1728,25 @@ template {
   .footer {
     padding-top: 34px;
   }
+  .footer__form {
+    margin-left: 0;
+  }
   .footer-discription {
-    margin-top: -39px;
-    margin-left: -14px;
+    margin-top: -43px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
   .footer__info {
-    margin-right: 73px;
+    margin-top: 4px;
   }
   .footer__button {
-    margin-left: -5px;
     margin-top: -2px;
   }
   .footer__message {
-    margin-right: 71px;
-    margin-left: -4px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    width: 100%;
   }
   .footer__item--mb-2 {
     margin-bottom: 18px;
@@ -1613,27 +1757,26 @@ template {
     margin-left: 5px;
   }
   .footer__title {
-    width: 246px;
+    width: 230px;
   }
   .footer__title--mb-3-3 {
     margin-left: 0;
+  }
+  .footer__title--inline {
+    margin: 0px 55px 0 0;
+  }
+  .footer__title_addition {
+    width: 246px;
   }
   .footer-wrapper {
     -ms-grid-columns: repeat 6, 1fr;
         grid-template-columns: repeat 6, 1fr;
     grid-row-gap: 40px;
   }
-  .footer__input {
-    -ms-flex-preferred-size: 42%;
-        flex-basis: 42%;
-  }
-  .footer__input-1 {
-    margin-left: -5px;
-    margin-top: 5px;
-  }
-  .footer__input-2 {
-    margin-right: 71px;
-    margin-top: 5px;
+  .footer__input-group {
+    -ms-flex-preferred-size: 47%;
+        flex-basis: 47%;
+    width: 100%;
   }
   .footer__logo {
     -ms-grid-row: 1;
@@ -1643,7 +1786,7 @@ template {
     margin-top: 39px;
   }
   .footer__social-links {
-    margin-left: -92px;
+    margin-left: -77px;
   }
   .footer__social-network {
     -ms-grid-row: 1;
@@ -1653,8 +1796,12 @@ template {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    margin-left: -94px;
+    margin-left: -63px;
     margin-top: 50px;
+    width: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
   }
   .footer__categories {
     -ms-grid-row: 2;
@@ -1665,12 +1812,12 @@ template {
   }
   .footer__legal {
     grid-column: span 2;
-    margin-top: 10px;
-    margin-left: 18px;
+    margin-top: 8px;
+    margin-left: 32px;
   }
   .footer__additional {
     grid-column: span 2;
-    margin-left: -79px;
+    margin-left: -50px;
     margin-top: 9px;
   }
   .footer__contact-details {
@@ -1685,6 +1832,11 @@ template {
     grid-row: 4;
     font-size: 12px;
     line-height: 15px;
+    max-width: 538px;
+    margin-top: 2px;
+  }
+  .footer-payments {
+    margin-left: 0;
   }
   .footer .logo {
     width: 96px;
@@ -1892,24 +2044,17 @@ template {
     -ms-grid-row: 5;
     grid-row: 5;
   }
-  .footer__button {
-    margin-left: -3px;
-  }
   .footer__input, .footer__message {
-    -ms-flex-preferred-size: 86%;
-        flex-basis: 86%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    width: 100%;
   }
   .footer__message {
-    margin-right: 77px;
-  }
-  .footer__input-1 {
-    margin-left: -4px;
+    margin-right: 0;
   }
   .footer__input-2 {
-    margin-left: -4px;
-  }
-  .footer-payments {
-    margin-left: 130px;
+    margin-right: 0;
+    margin-top: 0px;
   }
 }
 
@@ -2029,7 +2174,7 @@ template {
     grid-column: 1px;
   }
   .footer__social-links {
-    margin-left: -79px;
+    margin-left: -62px;
   }
   .footer__social-network {
     -ms-grid-row: 2;
@@ -2069,10 +2214,6 @@ template {
     -ms-grid-column: 1;
     grid-column: 1;
   }
-  .footer__input, .footer__message {
-    -ms-flex-preferred-size: 77%;
-        flex-basis: 77%;
-  }
 }
 
 @media (max-width: 480px) {
@@ -2081,14 +2222,26 @@ template {
         -ms-flex-order: 1;
             order: 1;
     margin-bottom: 15px;
-    margin-left: -4px;
+    margin-top: -5px;
   }
   .footer__button {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
     margin-top: 0px;
-    margin-right: 100px;
+    margin-right: 179px;
+  }
+  .footer__input-group {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .footer__contact-form {
+    max-width: 300px;
+  }
+  .modal__dialog--visible {
+    max-width: 320px;
+    padding-left: 13px;
+    padding-right: 13px;
   }
 }
 
@@ -2096,6 +2249,9 @@ template {
   .container {
     margin-left: 20px;
     margin-right: 20px;
+  }
+  .menu-button {
+    max-width: 320px;
   }
   .hotel {
     padding-top: 0;
@@ -2289,7 +2445,7 @@ template {
     margin: -49px 43px 0px 0;
   }
   .footer__social-links {
-    margin-left: -287px;
+    margin-left: -271px;
     margin-top: -4px;
   }
   .footer__legal {
@@ -2316,6 +2472,9 @@ template {
   .footer__contact-details {
     margin-top: -1px;
   }
+  .footer__contact-form {
+    margin-top: 0;
+  }
   .footer__item--mb-2 {
     margin-left: -4px;
     margin-top: 20px;
@@ -2337,15 +2496,12 @@ template {
     max-width: 280px;
   }
   .footer__input, .footer__message {
-    -ms-flex-preferred-size: 77%;
-        flex-basis: 77%;
-    margin-bottom: 30px;
-    width: 291px;
+    margin-bottom: 15px;
     margin-top: -16px;
   }
   .footer__info {
-    margin-top: -14px;
-    margin-left: -4px;
+    margin-top: 0px;
+    margin-left: 0px;
   }
   .footer__button {
     margin-top: 0px;
@@ -2355,13 +2511,40 @@ template {
     margin-top: -72px;
   }
   .footer-conditions {
-    margin-left: 0px;
+    margin-left: -1px;
     font-style: normal;
     font-weight: normal;
     font-size: 12.5px;
     line-height: 15px;
     margin-bottom: 9px;
     margin-top: -1px;
+    margin-right: 4px;
+  }
+  .footer__form {
+    width: 280px;
+  }
+  .navbar-menu {
+    margin-top: -19px;
+  }
+  .navbar-menu__item {
+    margin-bottom: 17px;
+    margin-right: 17px;
+  }
+  .navbar__user {
+    margin-right: 12px;
+  }
+  .navbar__search--mobile_visible {
+    margin-top: 8px;
+    margin-bottom: 22px;
+    margin-left: 64px;
+  }
+  .search__input {
+    width: 243px;
+  }
+  .modal__dialog--visible {
+    max-width: 320px;
+    padding-left: 13px;
+    padding-right: 13px;
   }
 }
 /*# sourceMappingURL=style.css.map */
