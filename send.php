@@ -9,24 +9,33 @@ $name = $_POST['name'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
 $newsletter = $_POST['newsletter'];
+$email = $_POST['email'];
 
-
-// Формирование самого письма
-$title = "Новое обращение Best Tour Plan";
+if(isset($name) & isset($phone) & isset($email)& isset($message)) {
+    $title = "Booking in Best Tour Plan";
 $body = "
-<h2>Новое обращение</h2>
+<h2>Booking</h2>
+<b>Имя:</b> $name<br>
+<b>Телефон:</b> $phone<br>
+<b>Почта:</b> $email<br>
+<b>Сообщение:</b> $message<br>";
+}
+
+else if(isset($name) & isset($phone) & isset($message)) {
+    $title = "Footer in Best Tour Plan";
+$body = "
+<h2>Send us a message</h2>
 <b>Имя:</b> $name<br>
 <b>Телефон:</b> $phone<br><br>
-<b>Сообщение:</b>$message<br>
-<b>Новости:</b> $newsletter<br>
-";
+<b>Сообщение:</b> $message<br>";
+}
 
-// Формирование самого письма
-$title = "Новый запрос Best Tour Plan";
+else if(isset($newsletter)) {
+$title = "Newsletter in Best Tour Plan";
 $body = "
-<h2>Новый запрос</h2>
-<b>Подписка без онлайн регистрации и СМС:</b> $newsletter<br>
-";
+<h2>Newsletter</h2>
+<b>Подписка на новости:</b> $newsletter<br>";
+}
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();

@@ -20,7 +20,7 @@
     ></script>
     <script src="mapbasics.js" type="text/javascript"></script> -->
   </head>
-  <body>
+  <body class="body-fixed">
     <header class="navbar navbar--mobile_fixed">
       <div class="container">
         <div class="navbar-top">
@@ -315,6 +315,7 @@
             class="subscribe__input"
             placeholder="Your email address"
             name="newsletter"
+            required
           />
           <button class="subscribe__button" type="submit">Send</button>
         </form>
@@ -385,7 +386,7 @@
               <div class="reviews-slider__item">
                 <div class="reviews-slider__profile">
                   <img
-                    src="img/reviews-avatar-2.jpeg"
+                    src="img/reviews-avatar-2.jpg"
                     alt="Photo: Susan White"
                     class="reviews-slider__avatar"
                   />
@@ -465,7 +466,13 @@
             <h3 class="card__title card__title-1">
               The curious corner of chamarel
             </h3>
-            <button class="card__button">Book Now</button>
+            <button
+              data-toggle="modal"
+              data-href="#booking-modal"
+              class="card__button"
+            >
+              Book Now
+            </button>
           </div>
           <!-- /.card -->
           <div
@@ -479,7 +486,13 @@
               class="card__image"
             />
             <h3 class="card__title card__title-2">Gymkhana club golf course</h3>
-            <button class="card__button">Book Now</button>
+            <button
+              data-toggle="modal"
+              data-href="#booking-modal"
+              class="card__button"
+            >
+              Book Now
+            </button>
           </div>
           <!-- /.card -->
           <div
@@ -495,7 +508,13 @@
             <h3 class="card__title card__title-3">
               Tamarind falls hiking trip - full day
             </h3>
-            <button class="card__button">Book Now</button>
+            <button
+              data-toggle="modal"
+              data-href="#booking-modal"
+              class="card__button"
+            >
+              Book Now
+            </button>
           </div>
           <!-- /.card -->
           <div
@@ -511,7 +530,13 @@
             <h3 class="card__title card__title-4">
               The blue marine discovery quest
             </h3>
-            <button class="card__button">Book Now</button>
+            <button
+              data-toggle="modal"
+              data-href="#booking-modal"
+              class="card__button"
+            >
+              Book Now
+            </button>
           </div>
           <!-- /.card -->
         </div>
@@ -589,19 +614,31 @@
           <div class="footer__social-network">
             <h3 class="footer__title footer__title--inline">Social Network</h3>
             <div class="footer__social-links">
-              <a href="#" class="footer__link" link="#"
+              <a
+                href="https://www.facebook.com/"
+                class="footer__link"
+                target="_blank"
+                link="#"
                 ><img
-                  class="footer__icon"
+                  class="footer__icon--facebook"
                   src="img/facebook.svg"
                   alt="Icon: Facebook" /></a
-              ><a href="#" class="footer__link" link="#"
+              ><a
+                href="https://www.youtube.com/"
+                class="footer__link"
+                target="_blank"
+                link="#"
                 ><img
-                  class="footer__icon"
+                  class="footer__icon--youtube"
                   src="img/youtube.svg"
                   alt="Icon: Youtube" /></a
-              ><a href="#" class="footer__link" link="#"
+              ><a
+                href="https://www.instagram.com/"
+                class="footer__link"
+                target="_blank"
+                link="#"
                 ><img
-                  class="footer__icon"
+                  class="footer__icon--instagram"
                   src="img/instagram.svg"
                   alt="Icon: Instagram"
               /></a>
@@ -652,10 +689,29 @@
                     alt="Icon: phone call"
                   />
                 </div>
-                Tel (business hours) : 269 1500 <br />
-                Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00
-                pm) <br />
-                Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+                <div class="contact-details">
+                  Tel (business hours) :
+                  <a
+                    class="contact-details contact-details_sunday"
+                    href="tel:269 1500"
+                    >269 1500</a
+                  >
+                  <br />
+                  Tel (hotline) Monday - Saturday :
+                  <a
+                    class="contact-details contact-details_sunday"
+                    href="tel:52-56-61-38"
+                    >52-56-61-38</a
+                  >
+                  (08:00 am – 20:00 pm) <br />
+                  Tel (hotline) Sunday :
+                  <a
+                    class="contact-details contact-details_sunday"
+                    href="tel:52-56-61-38"
+                    >52-56-61-38</a
+                  >
+                  (08:00 am – 14:00 pm)
+                </div>
               </li>
               <li class="footer__item footer__item--mb-2">
                 <div class="footer__icon-wrapper">
@@ -665,7 +721,9 @@
                     alt="icon: email"
                   />
                 </div>
-                cherly.lawson@example.com
+                <a class="contact-mail" href="mailto:cherly.lawson@example.com"
+                  >cherly.lawson@example.com</a
+                >
               </li>
             </ul>
           </div>
@@ -675,23 +733,27 @@
               Send us a message
             </h3>
             <form action="send.php" method="POST" class="footer__form form">
-              <div class="footer__input-group">
-                <input
-                  type="text"
-                  class="input footer__input footer__input-1"
-                  placeholder="Your Full Name*"
-                  name="name"
-                  required
-                />
-              </div>
-              <div class="footer__input-group">
-                <input
-                  type="tel"
-                  class="input footer__input footer__input-2"
-                  placeholder="Phone Number*"
-                  name="phone"
-                  required
-                />
+              <div class="mainer">
+                <div class="footer__input-group">
+                  <input
+                    type="text"
+                    class="input footer__input footer__input-1"
+                    placeholder="Your Full Name*"
+                    name="name"
+                    required
+                    minlength="2"
+                  />
+                </div>
+                <div class="footer__input-group">
+                  <input
+                    type="tel"
+                    class="input footer__input footer__input-2"
+                    placeholder="Phone Number*"
+                    name="phone"
+                    required
+                    minlength="18"
+                  />
+                </div>
               </div>
               <textarea
                 class="message footer__message"
@@ -706,13 +768,13 @@
         <!-- /.footer-wrapper -->
         <div class="footer-discription">
           <div class="footer-conditions">
-            <a href="#" class="footer-conditions footer-conditions__disclaimer"
+            <a href="#" class="footer-conditions footer__disclaimer"
               >Disclaimer</a
             >
-            <a href="#" class="footer-conditions footer-conditions__disclaimer"
+            <a href="#" class="footer-conditions footer__disclaimer"
               >Conditions of use</a
             >
-            <a href="#" class="footer-conditions footer-conditions__disclaimer"
+            <a href="#" class="footer-conditions footer__disclaimer"
               >Cancellation policy</a
             >
           </div>
@@ -749,6 +811,7 @@
             placeholder="Phone Number*"
             name="phone"
             required
+            minlength="18"
           />
           <input
             type="email"
@@ -787,6 +850,7 @@
             placeholder="Your Full Name*"
             name="name"
             required
+            minlength="2"
           />
           <input
             type="tel"
@@ -794,6 +858,7 @@
             placeholder="Phone Number*"
             name="phone"
             required
+            minlength="18"
           />
           <textarea
             class="message modal__message"

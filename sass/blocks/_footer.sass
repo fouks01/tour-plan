@@ -3,6 +3,20 @@
   color: $light
   padding-top: 108px
   padding-bottom: 46px
+  &__button
+    &:hover
+      background-color: $footer-text-color
+      transition: background-color 0.3s
+  &__input
+    width: 100%
+    margin-bottom: 15px
+    &-1
+      margin-bottom: 0
+    &-2
+      margin-bottom: 0
+    &-group
+      margin-bottom: 15px
+      flex-basis: 47%
   &__legal
     margin-left: 66px
   &__additional
@@ -74,6 +88,24 @@
       margin-bottom: 16px
       margin-left: 5px
   &__icon
+    &--facebook
+      &:hover
+        background-color: blue
+        transition: background-color 0.3s
+        border-radius: 50%
+        transform: scale(1.5)
+    &--youtube
+      &:hover
+        background-color: red
+        transition: background-color 0.3s
+        border-radius: 50%
+        transform: scale(1.5)
+    &--instagram
+      &:hover
+        background-color: orange
+        transition: background-color 0.3s
+        border-radius: 50%
+        transform: scale(1.5)
     &-1
       margin-left: 4px
       margin-top: 6px
@@ -95,16 +127,6 @@
   &__link
     text-decoration: none
     color: inherit
-  &__input
-    width: 100%
-    margin-bottom: 15px
-    &-1
-      margin-bottom: 0
-    &-2
-      margin-bottom: 0
-    &-group
-      margin-bottom: 15px
-      flex-basis: 47%
   &__message
     flex-basis: 100%
     margin-bottom: 23px
@@ -119,7 +141,7 @@
   &-discription
     display: flex
     flex-wrap: wrap
-    justify-content: end
+    justify-content: flex-end
     flex-direction: row
     margin-top: -7px
   &-conditions
@@ -128,14 +150,14 @@
     // margin-left: 7px
     // margin-top: -4px
     margin-top: 3px
-    &__disclaimer
-      text-decoration: none
-      color: $light
-      font-style: normal
-      font-weight: normal
-      font-size: 12px
-      line-height: 15px
-      margin-right: 8px
+  &__disclaimer
+    text-decoration: none
+    color: $light
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 15px
+    margin-right: 8px
   &-payments
     // margin-left: 246px
     // margin-top: -9px
@@ -143,3 +165,21 @@
     margin-left: 273px
   .logo
     width: 152px
+.mainer
+  display: flex
+  justify-content: space-between
+  width: 100%
+  flex-wrap: wrap
+.contact-details
+  &_sunday
+    text-decoration: none
+    color: $footer-text-color
+    &:hover
+      color: red
+      transition: color 0.3s
+.contact-mail
+  text-decoration: none
+  color: $footer-text-color
+  &:hover
+    color: red
+    transition: color 0.3s

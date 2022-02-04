@@ -42,6 +42,8 @@
         font-size: 12px
         line-height: 15px
         margin-right: 12px
+        &:hover
+          color: #fff
   .reviews
     &-slider
       &__item
@@ -487,6 +489,9 @@
     // &__message
     //   flex-basis: 77%
 @media (max-width: 480px)
+  .search
+    &__input
+      width: 280px
   .footer
     &__info
       order: 1
@@ -510,6 +515,17 @@
         max-width: 320px
         padding-left: 13px
         padding-right: 13px
+    &__message
+      width: 90%
+      margin-left: 14px
+    &__input
+      width: 90%
+      margin-left: 14px
+    &__button
+      min-width: 140px
+      margin-left: 14px
+    &__info
+      margin-right: 14px
 @media (max-width: 320px)
   .container
     margin-left: 20px
