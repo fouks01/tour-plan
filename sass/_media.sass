@@ -78,6 +78,10 @@
   .hotel-wrapper
     margin-top: 8px
     margin-left: 1px
+    &-back
+      &:hover
+        background-color: $primary
+        transition: background-color 0.3s
   .stars
     font-size: 9px
   .rating
@@ -85,6 +89,9 @@
   .search
     &__input
       width: 340px
+    &__button
+      &:hover
+        background-color: $primary
   .hotel
     padding-bottom: 56px
     &-grid
@@ -101,6 +108,8 @@
     &__button
       width: 104%
       margin-left: -4px
+      &:hover
+        background-color: $primary
     &__price
       margin-left: -3px
     &__room
@@ -108,6 +117,14 @@
     &__call-center
       margin-right: -8px
       margin-left: -2px
+  .modal
+    &__button
+      &:hover
+        background-color: $primary
+  .subscribe
+    &__button
+      &:hover
+        background-color: $primary
   .map
     width: 340px
   .image
@@ -125,8 +142,26 @@
   .card
     width: 340px
     height: 255px
+    &__button
+      &:hover
+        background-color: $primary
+  .contact
+    &-details
+      &_sunday
+        &:hover
+          color: $footer-text-color
+    &-mail
+      &:hover
+        color: $footer-text-color
   .footer
     padding-top: 34px
+    &__disclaimer
+      &:hover
+        color: $light
+    &__link
+      &-hover
+        &:hover
+          color: $footer-text-color
     &__form
       margin-left: 0
     &-discription
@@ -140,6 +175,8 @@
     &__button
       // margin-left: -5px
       margin-top: -2px
+      &:hover
+        background-color: $primary
     &__message
       flex-basis: 100%
       width: 100%
@@ -225,6 +262,57 @@
     .logo
       width: 96px
 
+@media (min-width: 993px)
+  .footer
+    &__icon
+      &-facebook
+        &:hover
+          background-color: blue
+          transition: background-color 0.3s
+          border-radius: 50%
+          transform: scale(1.5)
+      &-youtube
+        &:hover
+          background-color: red
+          transition: background-color 0.3s
+          border-radius: 50%
+          transform: scale(1.5)
+      &-instagram
+        &:hover
+          background-color: orange
+          transition: background-color 0.3s
+          border-radius: 50%
+          transform: scale(1.5)
+  .hotel
+    &-slider
+      &__button
+        &--next
+          &:hover
+            background-color: grey
+            opacity: 0.5
+        &--prev
+          &:hover
+            background-color: grey
+            opacity: 0.5
+  .reviews
+    &-slider
+      &__button
+        &--next
+          &:hover
+            background-color: $light
+            opacity: 0.7
+        &--prev
+          &:hover
+            background-color: $light
+            opacity: 0.7
+  .breadcrumb
+    &-list
+      &__link
+        &:hover
+          color: $primary
+  .user
+    &:hover .user__name
+      color: red
 @media (max-width: 767px)
   .container
     max-width: 700px
@@ -255,6 +343,8 @@
       padding-top: 30px
       &--visible
         display: block
+        overflow-y: auto
+        overflow-x: hidden
     &-menu
       flex-direction: column
       &__item
@@ -265,6 +355,10 @@
     &__user
       flex-direction: column
       justify-content: center
+    &__search
+      &--visible
+        margin-left: auto
+        margin-right: 0
   .menu
     &-button
       display: flex
@@ -558,14 +652,14 @@
         margin-top: -6px
     &-slider
       &__button
+        background-size: 5px
+        width: 12px
+        height: 12px
         &--next
           right: 11px
-          width: 4px
-          height: 7px
         &--prev
           left: 7px
-          width: 4px
-          height: 7px
+
   .breadcrumb-list
     margin-left: -1px
   .navbar-top
@@ -633,7 +727,7 @@
         margin-left: -9px
         margin-bottom: 9px
       &__item
-        padding: 0 30px 34px
+        padding: 0 28px 34px
         max-width: 281px
         margin-right: 13px
       &__date
@@ -767,3 +861,5 @@
         max-width: 320px
         padding-left: 13px
         padding-right: 13px
+  .sunday-tel
+    display: block

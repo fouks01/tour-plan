@@ -22,6 +22,11 @@
     display: flex
     flex-wrap: wrap
     align-items: center
+    &-back
+      margin-top: 15px
+      &:hover
+        background-color: $footer-text-color
+        transition: background-color 0.3s
   &-discription
     font-size: 12px
     line-height: 6px
@@ -71,8 +76,8 @@
       &--prev
         left: 18px
         background-image: url(../img/arrow-prev.svg)
-  .swiper
-    margin-left: 2px
+.swiper
+  margin-left: 2px
 .stars
   flex-basis: 100%
 .image-star

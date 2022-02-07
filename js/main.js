@@ -33,23 +33,6 @@ $(document).ready(function () {
   menuButton.on("click", function () {
     $(".navbar-bottom").toggleClass("navbar-bottom--visible");
   });
-  // var myMap;
-
-  // // Дождёмся загрузки API и готовности DOM.
-  // ymaps.ready(init);
-
-  // function init() {
-  //   // Создание экземпляра карты и его привязка к контейнеру с
-  //   // заданным id ("map").
-  //   myMap = new ymaps.Map('map', {
-  //     // При инициализации карты обязательно нужно указать
-  //     // её центр и коэффициент масштабирования.
-  //     center: [7.845936, 98.297179], // Москва
-  //     zoom: 16
-  //   }, {
-  //     searchControlProvider: 'yandex#search'
-  //   });
-  // }
 
   const modalButton = $("[data-toggle=modal]");
   const closeModalButton = $(".modal__close");
@@ -106,10 +89,6 @@ $(document).ready(function () {
           required: "Phone required",
           minlength: "Phone must be at least 11 characters",
         },
-        // newsletter: {
-        //   required: "We need your email address to contact you",
-        //   email: "Your email address must be in the format of name@domain.com",
-        // },
       },
     });
   });
@@ -135,14 +114,4 @@ $(document).ready(function () {
 
   AOS.init();
 
-  // var disableBodyScroll = function () {
-  //   window.body_scroll_pos = $(window).scrollTop(); // write page scroll position in a global variable
-  //   $('body').css('overflow-y', 'hidden');
-  // }
-
-  // // Run this function when you close your popup:
-  // var enableBodyScroll = function () {
-  //   $('body').css('overflow-y', 'scroll');
-  //   $(window).scrollTop(window.body_scroll_pos); // restore page scroll position from the global variable
-  // }
 });
